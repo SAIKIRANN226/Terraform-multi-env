@@ -14,8 +14,13 @@ resource "aws_route53_record" "www" {
   name    = "${each.key}.${var.domain_name}" #interpolation
   type    = "A"
   ttl     = 1
-  records = [startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  # terraform function = startswith(each.key,"web") that means if each.key starts with web
+  records = [startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  
 }
+
+# terraform function = startswith(each.key,"web") that means if each.key starts with web for example
+
+# startswith("hello world", "hello") ----> true
+# startswith("hello world", "world") ----> false
 
 # output "instances_info" {
 #   value = aws_instance.web
