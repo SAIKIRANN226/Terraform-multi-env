@@ -4,7 +4,7 @@ variable "instance_names" {
 #     mongodb = "t3.small"
 #     redis = "t2.micro"
 #     mysql = "t3.small"
-#   }
+#   } created only few to save time
 }
 
 variable "zone_id" {
