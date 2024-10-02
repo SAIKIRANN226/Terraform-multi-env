@@ -14,3 +14,8 @@ variable "zone_id" {
 variable "domain_name" {
   default = "daws76s.online"
 }
+
+
+# All these variables are default and now i need seperate variables for dev and prod so created two   folders ----> dev.tfvars/prod.tfvars
+
+# We have environment selection in the jenkins in the dropdown we can use future sessions

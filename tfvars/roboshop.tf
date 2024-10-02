@@ -17,7 +17,7 @@ resource "aws_route53_record" "www" {
   records = [startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  
 }
 
-# terraform function = startswith(each.key,"web") that means if each.key starts with web for example
+# terraform function = startswith(each.key,"web") that means if each.key starts with web then get the public_ip. for example
 
 # startswith("hello world", "hello") ----> true
 # startswith("hello world", "world") ----> false
