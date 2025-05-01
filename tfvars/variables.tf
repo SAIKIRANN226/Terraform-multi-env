@@ -5,7 +5,7 @@ variable "instance_names" {
 #     redis = "t2.micro"
 #     mysql = "t3.small"
 #     web = "t2.micro"
-#   } created only few to save time
+#   } Created only few to save time while applying or destroying
 }
 
 variable "zone_id" {
@@ -17,6 +17,6 @@ variable "domain_name" {
 }
 
 
-# All these variables are default and now i need seperate variables for dev and prod so created two   folders ----> dev.tfvars/prod.tfvars
+# All these variables are default and now i need seperate variables for dev and prod so created two   folders ----> dev.tfvars/prod.tfvars in dev and prod folders
 
 # We have environment selection in the jenkins in the dropdown we can use in future sessions

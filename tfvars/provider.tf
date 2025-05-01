@@ -14,7 +14,7 @@ terraform {
   }
 }
 
-# the above 10-13 lines are commented because terraform will understand that devops engineers are using s3 bucket so we need to keep empty block however actual keys are in dev/prod backend.tf
+# The above 10-13 lines are commented because terraform will understand that devops engineers are using s3 bucket so we need to keep backend block or empty block, however actual keys are in dev/prod backend.tf
 
 provider "aws" {
   region = "us-east-1"
