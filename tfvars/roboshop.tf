@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 resource "aws_route53_record" "www" {
   for_each = aws_instance.web
   zone_id = var.zone_id
-  name    = "${each.key}.${var.domain_name}" #interpolation
+  name    = "${each.key}.${var.domain_name}" # Interpolation
   type    = "A"
   ttl     = 1
   records = [startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  
