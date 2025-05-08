@@ -18,6 +18,6 @@ variable "domain_name" {
 }
 
 
-# All these variables are default and now i need seperate variables for dev and prod so created two   folders ----> dev.tfvars/prod.tfvars in dev and prod folders
+# All these variables are default and now i need seperate variables for dev and prod so created two   folders ----> dev.tfvars/prod.tfvars in dev and prod.tfvras in prod folders
 
 # We have environment selection in the jenkins in the dropdown we can use in future sessions
