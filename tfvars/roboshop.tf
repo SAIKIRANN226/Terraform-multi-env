@@ -13,7 +13,7 @@ resource "aws_route53_record" "www" {
   name    = "${each.key}.${var.domain_name}" # Interpolation
   type    = "A"
   ttl     = 1
-  records = [startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  
+  records = [ startswith(each.key, "web") ? each.value.public_ip : each.value.private_ip ]  
 }
 
 # When terraform function = startswith(each.key,"web") that means if each.key starts with web then get the public_ip. Below is the example of startswith function.
